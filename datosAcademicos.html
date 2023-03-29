@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Datos Academicos</title>
+</head>
+<body>
+	<button class="burger" onclick="toggleMenu()"><a class="men">MENU</a></button>
+    <div class="menu">
+      <nav>
+      <a href="datospersonales.html" style="animation-delay: 0.2s">Datos Personales</a>
+        <a href="redessociales.html" style="animation-delay: 0.3s">Redes sociales</a>
+        <a href="datosAcademicos.html" style="animation-delay: 0.4s">Datos Academicos</a>
+        <a href="prueba2.html" style="animation-delay: 0.5s">Menu</a>
+      </nav>
+    </div>
+     <script type="text/javascript">
+      const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
+    <div class="conteiner">
+    	<div class="cards">
+    		<div class="card Universidad">
+    			<h2 class="card-title-large">Universitario</h2>
+    			<h3 class="card-title-small">Universitario</h3>
+    			<p class="description">...</p>
+    			<a href="#" class="card-cta">&rarr;</a>
+    		</div>
+    		<div class="card Terciario">
+    			<h2 class="card-title-large">Terciario</h2>
+    			<h3 class="card-title-small">Terciario</h3>
+    			<p class="description">...</p>
+    			<a href="#" class="card-cta">&rarr;</a>
+    		</div>
+    		<div class="card Secundario">
+    			<h2 class="card-title-large">Secundario</h2>
+    			<h3 class="card-title-small">Secundario</h3>
+    			<p class="description">...</p>
+    			<a href="#" class="card-cta">&rarr;</a>
+    		</div>
+    		<div class="card Primario">
+    			<h2 class="card-title-large">Primario</h2>
+    			<h3 class="card-title-small">Primario</h3>
+    			<p class="description">...</p>
+    			<a href="#" class="card-cta">&rarr;</a>
+    		</div>
+    	</div>
+    </div>
+    <style>
+
+    .conteiner{
+
+    	max-width: 110rem;
+    	padding: 1.5rem;
+    }
+    .cards{
+    	display: grid;
+    	grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+    	grid-gap: 1.5rem;
+    }
+    .card{
+    	background: #BB8FCE;
+    	color: #fff;
+    	padding: 1.5rem;
+    	overflow: hidden;
+    	border-radius: 0.8rem;
+    }
+    .card-title-large{
+    	font-family: fantasy, sans-serif;
+    	font-size: 10rem;
+    	letter-spacing: 0.5rem;
+    	color: #1d1d1d;
+    	transform: translateX(7rem);
+    	transition: transform 2.5s;
+    }
+    .card-title-small{
+    	margin-bottom: 1rem;
+    }
+    .description{
+    	font-size: 1.4rem;
+    	line-height: 1.5;
+    }
+    .card-cta{
+    	display: inline-block;
+    	width: 3.5rem;
+    	height: 3.5rem;
+    	border-radius: 50%;
+    	display: grid;
+    	place-items:center;
+    	margin-left: auto;
+    }
+    .card:hover .card-cta{
+    	background-color: #262525;
+    }
+    .card:hover .card-title-large{
+    	transform: translateX(-115%);
+    	color: #fff;
+    }
+    .card.Unversidad:hover{
+    	background-color: #1da1f2;
+    }
+    .card.Terciario:hover{
+    	background: radial-gradient(
+    		at 20% 128%,
+    		#feda78 20%,
+    		#e23467 60%,
+    		#ac2bb3 90%
+    		);
+    }
+    .card.Secundario:hover{
+    	background-color: #4267b2;
+    }
+    .card.Primario:hover{
+    	background-color: #ff074f;
+    }
+    * {
+	  box-sizing: border-box;
+	}
+
+	body {
+	  font-family: "Euclid Circular A", Poppins;
+	  color: #f9f9f9;
+	  background-image: url("https://raw.githubusercontent.com/frontend-joe/css-menus/main/menu-2/bg.webp");
+	  background-size: 400%;
+	  background-repeat: no-repeat;
+	  background-position: 0% 10%;
+	}
+
+	button {
+	  border: 0;
+	  padding: 0;
+	  background: transparent;
+	  cursor: pointer;
+	}
+	button a{
+		position: fixed;
+		top: 40px;
+		left: 40px;
+		width: 70px;
+		height: 70px;
+		color: #000000 ;
+	}
+	.burger,
+	.menu {
+	  position: fixed;
+	}
+
+	.burger {
+	  z-index: 3;
+	  top: 0;
+	  left: 0;
+	  display: grid;
+	  place-items: center;
+	  width: 88px;
+	  height: 88px;
+	  background-image: url(<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M9.33745 28.2367L7.76245 26.6617L16.4249 17.9992L7.76245 9.33672L9.33745 7.76172L17.9999 16.4242L26.6624 7.76172L28.2374 9.33672L19.5749 17.9992L28.2374 26.6617L26.6624 28.2367L17.9999 19.5742L9.33745 28.2367Z" fill="#F7F7F7"/>
+	</svg>);
+	  background-repeat: no-repeat;
+	  background-position: center;
+	}
+
+	body.open .burger {
+	  background-image: url(<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M9.33745 28.2367L7.76245 26.6617L16.4249 17.9992L7.76245 9.33672L9.33745 7.76172L17.9999 16.4242L26.6624 7.76172L28.2374 9.33672L19.5749 17.9992L28.2374 26.6617L26.6624 28.2367L17.9999 19.5742L9.33745 28.2367Z" fill="#F7F7F7"/>
+	</svg>);
+	}
+
+	.menu {
+	  z-index: 2;
+	  top: 0;
+	  left: 0;
+	  display: grid;
+	  place-items: center;
+	  width: 400px;
+	  height: calc(100% - 20px);
+	  background: #07030a;
+	  translate: -100% 0;
+	  transition: translate 0.375s cubic-bezier(0.175, 0.885, 0.32, 1);
+	}
+
+	.menu nav {
+	  opacity: 0;
+	}
+
+	@keyframes menu-in {
+	  0% {
+	    clip-path: ellipse(60% 60% at 0% 50%);
+	  }
+	  100% {
+	    clip-path: ellipse(120% 120% at 0% 50%);
+	  }
+	}
+
+	body.open .menu {
+	  opacity: 1;
+	  visibility: visible;
+	  translate: 0;
+	  animation: menu-in 0.375s;
+	}
+
+	body.open .menu nav {
+	  opacity: 1;
+	}
+
+	.menu nav:hover a {
+	  opacity: 0.25;
+	}
+
+	.menu nav a:hover {
+	  opacity: 1;
+	}
+
+	.menu nav {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.menu a {
+	  position: relative;
+	  color: #f9f9f9;
+	  font-size: 32px;
+	  font-family: "Euclid Circular A";
+	  padding: 20px 0;
+	  width: 300px;
+	  text-decoration: none;
+	  transition: 0.4s;
+	}
+
+	.menu a::before,
+	.menu a::after {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: 10px;
+	  width: 100%;
+	  height: 2px;
+	  border-radius: 2px;
+	  transition: 0.4s;
+	}
+
+	.menu a::before {
+	  opacity: 0;
+	  background: rgb(255 255 255 / 20%);
+	}
+
+	.menu a::after {
+	  transform: scaleX(0);
+	  transform-origin: 0% 50%;
+	  background: #f7f7f7;
+	}
+
+	.menu a:hover::before {
+	  opacity: 1;
+	}
+
+	.menu a:hover::after {
+	  transform: scaleX(1);
+	}
+
+	body.open .menu a {
+	  animation: appear 0.25s backwards;
+	}
+
+	@keyframes appear {
+	  0% {
+	    opacity: 0;
+	    translate: -30px 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
+
+</style>
+  </body>
+</html>
+
+</body>
+</html>

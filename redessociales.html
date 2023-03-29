@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Redes Sociales</title>
+</head>
+<body>
+<button class="burger" onclick="toggleMenu()"><a>MENU</a></button>
+    <div class="menu">
+      <nav>
+         <a href="datospersonales.html" style="animation-delay: 0.2s">Datos Personales</a>
+        <a href="redessociales.html" style="animation-delay: 0.3s">Redes sociales</a>
+        <a href="datosAcademicos.html" style="animation-delay: 0.4s">Datos Academicos</a>
+        <a href="prueba2.html" style="animation-delay: 0.5s">Menu</a>
+      </nav>
+    </div>
+     <script type="text/javascript">
+      const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
+    <div class="imgs">
+    	<section>
+		<img src="https://cdn.pixabay.com/photo/2016/09/17/07/03/instagram-1675670_1280.png">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMI8zZdy2_bOTnzkUDUekVff-lYfC-HACqig&usqp=CAU">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr0qq7pHt2RAjrMGGKJ_-460bOO8Mpb038TQ&usqp=CAU">
+		
+	</section>
+    </div>
+    	<div class="item">
+
+		<p>Ingrese su Instagram<span class="required">*</span></p>
+		<input type="text" name="name" required/>
+		<p>Twitter<span class="required">*</span></p>
+		<input type="text" name="name" required/>
+		<p>Linkedin<span class="required">*</span></p>
+		<input type="text" name="name" required/>
+		<p>Canal de Youtube</p>
+		<input type="text" name="name" required/>
+		<p>Twitch</p>
+		<input type="text" name="name" required/>
+		<p>Reddit</p>
+		<input type="text" name="name" required/>
+		
+	</div>
+<style>
+	p{color: #FDFEFE;}
+		input{
+
+			background: #BB8FCE;
+		}
+
+	.item{
+		position: fixed;
+		top: 100px;
+	}
+	.item,p,input{
+		height: 40px;
+		width: 200px;
+	}
+		body {
+	  font-family: "Euclid Circular A", Poppins;
+	  color: #f9f9f9;
+	  background-image: url("https://raw.githubusercontent.com/frontend-joe/css-menus/main/menu-2/bg.webp");
+	  background-size: 400%;
+	  background-repeat: no-repeat;
+	  background-position: 0% 10%;
+	}
+	.imgs{
+		position: fixed;
+		left: 400px;
+		top: 100px;
+	}
+	section{
+			display: flex;
+			width: 1000px;
+			height:830px;
+		}
+		section img{
+			width: 0px;
+			flex-grow: 1;
+			object-fit: cover;
+			opacity: .8;
+			transition: .5s ease;
+		}
+		section img:hover{
+			cursor: crosshair;
+			width: 700px;
+			opacity: 1;
+			filter: contrast(120%);
+		}
+		button {
+	  border: 0;
+	  padding: 0;
+	  background: transparent;
+	  cursor: pointer;
+	}
+	button a{
+		width: 20px;
+		height: 20px;
+		color: #D5D8DC ;
+	}
+	.burger,
+	.menu {
+	  position: fixed;
+	}
+
+	.burger {
+	  z-index: 3;
+	  top: 0;
+	  left: 0;
+	  display: grid;
+	  place-items: center;
+	  width: 88px;
+	  height: 88px;
+	  background-image: url(<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M9.33745 28.2367L7.76245 26.6617L16.4249 17.9992L7.76245 9.33672L9.33745 7.76172L17.9999 16.4242L26.6624 7.76172L28.2374 9.33672L19.5749 17.9992L28.2374 26.6617L26.6624 28.2367L17.9999 19.5742L9.33745 28.2367Z" fill="#F7F7F7"/>
+	</svg>);
+	  background-repeat: no-repeat;
+	  background-position: center;
+	}
+	.menu {
+	  z-index: 2;
+	  top: 0;
+	  left: 0;
+	  display: grid;
+	  place-items: center;
+	  width: 400px;
+	  height: calc(100% - 20px);
+	  background: #07030a;
+	  translate: -100% 0;
+	  transition: translate 0.375s cubic-bezier(0.175, 0.885, 0.32, 1);
+	}
+
+	.menu nav {
+	  opacity: 0;
+	}
+
+	@keyframes menu-in {
+	  0% {
+	    clip-path: ellipse(60% 60% at 0% 50%);
+	  }
+	  100% {
+	    clip-path: ellipse(120% 120% at 0% 50%);
+	  }
+	}
+
+	body.open .menu {
+	  opacity: 1;
+	  visibility: visible;
+	  translate: 0;
+	  animation: menu-in 0.375s;
+	}
+
+	body.open .menu nav {
+	  opacity: 1;
+	}
+
+	.menu nav:hover a {
+	  opacity: 0.25;
+	}
+
+	.menu nav a:hover {
+	  opacity: 1;
+	}
+
+	.menu nav {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.menu a {
+	  position: relative;
+	  color: #f9f9f9;
+	  font-size: 32px;
+	  font-family: "Euclid Circular A";
+	  padding: 20px 0;
+	  width: 300px;
+	  text-decoration: none;
+	  transition: 0.4s;
+	}
+
+	.menu a::before,
+	.menu a::after {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: 10px;
+	  width: 100%;
+	  height: 2px;
+	  border-radius: 2px;
+	  transition: 0.4s;
+	}
+
+	.menu a::before {
+	  opacity: 0;
+	  background: rgb(255 255 255 / 20%);
+	}
+
+	.menu a::after {
+	  transform: scaleX(0);
+	  transform-origin: 0% 50%;
+	  background: #f7f7f7;
+	}
+
+	.menu a:hover::before {
+	  opacity: 1;
+	}
+
+	.menu a:hover::after {
+	  transform: scaleX(1);
+	}
+
+	body.open .menu a {
+	  animation: appear 0.25s backwards;
+	}
+
+	@keyframes appear {
+	  0% {
+	    opacity: 0;
+	    translate: -30px 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
+	</style>
+  </body>
+</html>

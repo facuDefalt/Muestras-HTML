@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatilble" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale-1.0">
+    <title>Menu2</title>   
+  </head>
+  <body>
+  	<div class="conteiner">
+  		<div class="opcion"><a  href="datospersonales.html">Datos personales</a> </div>
+  		<div class="opcion"><a   href="datosAcademicos.html">Datos academicos</a></div>
+  		<div class="opcion"><a   href="redessociales.html">Redes sociales</a></div>
+  	</div>
+    <style>
+    	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700$display=swap");
+	* {
+		margin:0;
+		padding: 0;
+	  box-sizing: border-box;
+	  font-family: "Roboto", sans-serif;
+	}
+
+	body {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+	  color: #FDFEFE ;
+	  background-image: url("https://raw.githubusercontent.com/frontend-joe/css-menus/main/menu-2/bg.webp");
+	  background-size: 400%;
+	  
+	}
+
+	.conteiner{
+		width: 1000px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.conteiner .opcion{
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 200px;
+		height: 50px;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.conteiner .opcion a{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(255, 255, 255, 0.05);
+		box-shadow:  0 15px 15px rgba(0, 0, 0, 0.3);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 30px;
+		padding: 10px;
+		letter-spacing: 1px;
+		text-decoration: none;
+		overflow: hidden;
+		color: #fff;
+		font-weight: 400px;
+		z-index: 1;
+		transition: 0.5s;
+		
+		backdrop-filter:blur(15px);
+	}
+	.conteiner .opcion:hover a{
+		letter-spacing: 3px;
+	}
+	.conteiner .opcion a::before{
+		content: "";
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		height: 100%;
+		background: linear-gradient(to left, rgba(255, 255, 255, 0.15),transparent);
+		transform: skewX(45deg) translate(0);
+		transition: 0.5s;
+		filter: blur(0px);
+	}
+	.conteiner .opcion:hover a::before{
+		transform: skewX(45deg) translate(200px);
+	}
+	.conteiner .opcion::before{
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		bottom: -5px;
+		width: 30px;
+		height: 10px;
+		background: #f00;
+		border-radius: 10px;
+		transition: 0.5s;
+		transition-delay: 0.5s;
+	}
+	.conteiner .opcion:hover::before{
+		bottom: 0;
+		height: 50%;
+		width: 50%;
+		border-radius: 30px;
+}
+	.conteiner .opcion::after{
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: -5px;
+		width: 30px;
+		height: 10px;
+		transition: 0.5s;
+		transition-delay: 0.5s;
+}
+.conteiner .opcion:hover::before{
+	bottom: 0;
+		height: 50%;
+		width: 50%;
+		border-radius: 30px;
+}
+.conteiner .opcion:nth-child(1)::before,
+.conteiner .opcion:nth-child(1)::after{
+	background:#BB8FCE;
+	box-shadow: 0 0 5px #BB8FCE,0 0  15px #BB8FCE, 0 0 30px #BB8FCE,0 0 60px #BB8FCE;
+}
+.conteiner .opcion:nth-child(2)::before,
+.conteiner .opcion:nth-child(2)::after{
+	background:#5B2C6F ;
+	box-shadow: 0 0 5px #5B2C6F ,0 0  15px #5B2C6F , 0 0 30px #5B2C6F ,0 0 60px #5B2C6F ;
+}
+.conteiner .opcion:nth-child(3)::before,
+.conteiner .opcion:nth-child(3)::after{
+	background:#C39BD3;
+	box-shadow: 0 0 5px #C39BD3 ,0 0  15px #C39BD3, 0 0 30px #C39BD3,0 0 60px #C39BD3;
+}
+
+</style>
+  </body>
+</html>
